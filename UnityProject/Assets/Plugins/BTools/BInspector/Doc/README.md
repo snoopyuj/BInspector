@@ -29,17 +29,17 @@ Unity Interface Optimization: Making the Inspector More User-Friendly.
 
 The purpose of this project is to optimize Unity Inspector and improve game development efficiency. As shown in Fig.1, the current variable does not indicate whether leaving it empty would cause a game error.
 
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.1. Original interface.png" height="40"></img>
+<img src="./Pics/Fig.1. Original interface.png" height="40"></img>
 
 Developers can only check it during runtime through code. If we can notify developers of this error while editing data, we can avoid unnecessary debugging time and improve project development efficiency (Fig.2).
 
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.2. Warning message appears when there is a null value.png" height="80"></img>
+<img src="./Pics/Fig.2. Warning message appears when there is a null value.png" height="80"></img>
 
 In addition, this project improves the display format of some variables for easier editing and reading by developers. The project also includes a sample scene for practical exercises.
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.3. Original display method for string.png" height="80"></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.4. Improved display method for string according to different patterns.png" height="80"></img>
+<img src="./Pics/Fig.3. Original display method for string.png" height="80"></img>
+<img src="./Pics/Fig.4. Improved display method for string according to different patterns.png" height="80"></img>
 </p>
 
 ## Array Element Title
@@ -47,8 +47,8 @@ In addition, this project improves the display format of some variables for easi
 Use a specific variable in a class as the display name instead of "Element 0", "Element 1", "Element 2", etc.
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.5. Original display method for List.png" height="100"></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.6. Use a variable value as the display name.png" height="100"></img>
+<img src="./Pics/Fig.5. Original display method for List.png" height="100"></img>
+<img src="./Pics/Fig.6. Use a variable value as the display name.png" height="100"></img>
 </p>
 
 ```CSharp
@@ -91,8 +91,8 @@ public enum TestEnumTitle
 Display the variable based on conditions
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.25 Use other variable conditions to display the variable.png" height="40"></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.26 Use other variable conditions to display the variable.png" height="70"></img>
+<img src="./Pics/Fig.25 Use other variable conditions to display the variable.png" height="40"></img>
+<img src="./Pics/Fig.26 Use other variable conditions to display the variable.png" height="70"></img>
 </p>
 
 ```CSharp
@@ -111,8 +111,8 @@ public int byVar = 0;
 Change the display name, tooltip, color, and read-only status of a variable.
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.7. Original variable display method.png" height="60"></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.8. Changeable name, background color, read-only mode.png" height="60"></img>
+<img src="./Pics/Fig.7. Original variable display method.png" height="60"></img>
+<img src="./Pics/Fig.8. Changeable name, background color, read-only mode.png" height="60"></img>
 </p>
 
 ```CSharp
@@ -136,7 +136,7 @@ public float testFloat = 123f;
 
 Display an enum using a mask (multiple selections are possible).
 
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.9. Enum becomes mask display method.png" height="140"></img>
+<img src="./Pics/Fig.9. Enum becomes mask display method.png" height="140"></img>
 
 ```CSharp
 // Parameters:
@@ -161,7 +161,7 @@ public enum MyMask
 
 Display a message (info/warning/error) based on a condition.
 
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.10. Conditions for warning messages based on developer settings.png" height="70"></img>
+<img src="./Pics/Fig.10. Conditions for warning messages based on developer settings.png" height="70"></img>
 
 ```CSharp
 // Method 1: Use the built-in Common Judge Type to evaluate the condition.
@@ -179,8 +179,8 @@ public Camera c = null;
 ```
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.11. Developer-defined conditions.png" height="70"></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.12. Developer-defined conditions.png" height="70"></img>
+<img src="./Pics/Fig.11. Developer-defined conditions.png" height="70"></img>
+<img src="./Pics/Fig.12. Developer-defined conditions.png" height="70"></img>
 </p>
 
 ```CSharp
@@ -216,8 +216,8 @@ public HelpMessageContent Show()
 This feature allows using a Property (getter, setter) to display a variable in the Inspector, instead of displaying the variable directly.
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.13. Original variable b changed to display BoolProperty.png" height=""></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.14. When editing variables, execute Property directly.png" height=""></img>
+<img src="./Pics/Fig.13. Original variable b changed to display BoolProperty.png" height=""></img>
+<img src="./Pics/Fig.14. When editing variables, execute Property directly.png" height=""></img>
 </p>
 
 ```CSharp
@@ -246,8 +246,8 @@ public bool BoolProperty
 Display Min Max Slider
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.15. Left and right extreme values cannot be edited.png" height="40"></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.16. Editable left and right extreme values.png" height="40"></img>
+<img src="./Pics/Fig.15. Left and right extreme values cannot be edited.png" height="40"></img>
+<img src="./Pics/Fig.16. Editable left and right extreme values.png" height="40"></img>
 </p>
 
 ```CSharp
@@ -271,8 +271,8 @@ public RangeFloat rangeFloat2 = new RangeFloat(-10f, 10f, -5f, 5f);
 Adjustable order list
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.17. List original display method.png" height="120"></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.18. List interface that can change order and display name.png" height="150"></img>
+<img src="./Pics/Fig.17. List original display method.png" height="120"></img>
+<img src="./Pics/Fig.18. List interface that can change order and display name.png" height="150"></img>
 </p>
 
 ```CSharp
@@ -299,8 +299,8 @@ public class CustomClass
 Change string display style
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.19. String original display method.png" height=""></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.20. String display method improved according to different modes.png" height=""></img>
+<img src="./Pics/Fig.19. String original display method.png" height=""></img>
+<img src="./Pics/Fig.20. String display method improved according to different modes.png" height=""></img>
 </p>
 
 ```CSharp
@@ -334,19 +334,19 @@ public string categoryString = "Speed/High";
 
 Create the ScriptableObject directly on the Inspector of the code file, without the need to write an additional function to add the ScriptableObject.
 
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.21. No need to write additional functions to add ScriptableObject.png" height=""></img>
+<img src="./Pics/Fig.21. No need to write additional functions to add ScriptableObject.png" height=""></img>
 
 ## Scriptable Object File Location Inspector
 
 Display the file location on the ScriptableObject for quick access to the file path.
 
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.22 Display file location and click to return to that path.png" height=""></img>
+<img src="./Pics/Fig.22 Display file location and click to return to that path.png" height=""></img>
 
 ## Sub View
 
 Add a preview button to the drag-and-drop field to preview the object parameter settings.
 
 <p>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.23 Add preview button.png" height=""></img>
-<img src="./UnityProject/Assets/Plugins/BTools/BInspector/Doc/Pics/Fig.24 Open preview window.png" height="200"></img>
+<img src="./Pics/Fig.23 Add preview button.png" height=""></img>
+<img src="./Pics/Fig.24 Open preview window.png" height="200"></img>
 </p>

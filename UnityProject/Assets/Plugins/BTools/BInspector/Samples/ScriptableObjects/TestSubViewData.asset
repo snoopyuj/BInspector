@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0dc902964d36f4e90d435ddcd22ad8, type: 3}
+  m_Name: TestSubViewData
+  m_EditorClassIdentifier: 
+  cam: {fileID: 20000012607670122, guid: aebb38aee4e1b9e419f5fbd562de3424, type: 3}
+  l: {fileID: 108000012275209206, guid: 5d8accace1f5e5d41a9d874f14a95265, type: 3}
