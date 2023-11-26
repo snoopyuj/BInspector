@@ -1,4 +1,4 @@
-﻿/*
+/*
  * @author	bwaynesu
  * @date	2017/08/03
  */
@@ -15,12 +15,11 @@ namespace BTools.BInspector
             switch (_property.propertyType)
             {
                 case SerializedPropertyType.Vector2:
-                    return ((EditorGUIUtility.currentViewWidth >= 332.1f) ? 1f : 2f);
-
                 case SerializedPropertyType.Vector3:
-                    return ((EditorGUIUtility.currentViewWidth >= 332.1f) ? 1f : 2f);
-
                 case SerializedPropertyType.Vector4:
+                case SerializedPropertyType.Vector2Int:
+                case SerializedPropertyType.Vector3Int:
+                case SerializedPropertyType.Quaternion:
                     return ((EditorGUIUtility.currentViewWidth >= 332.1f) ? 1f : 2f);
 
                 case SerializedPropertyType.Rect:
@@ -28,9 +27,6 @@ namespace BTools.BInspector
 
                 case SerializedPropertyType.Bounds:
                     return 3f;
-
-                case SerializedPropertyType.Quaternion:
-                    return ((EditorGUIUtility.currentViewWidth >= 332.1f) ? 1f : 2f);
 
                 default:
                     return 1f;
@@ -44,9 +40,6 @@ namespace BTools.BInspector
 
             switch (_titleNameProp.propertyType)
             {
-                case SerializedPropertyType.Generic:
-                    break;
-
                 case SerializedPropertyType.Integer:
                     return _titleNameProp.intValue.ToString();
 
@@ -65,9 +58,6 @@ namespace BTools.BInspector
                 case SerializedPropertyType.ObjectReference:
                     return _titleNameProp.objectReferenceValue.ToString();
 
-                case SerializedPropertyType.LayerMask:
-                    break;
-
                 case SerializedPropertyType.Enum:
                     return _titleNameProp.enumNames[_titleNameProp.enumValueIndex];
 
@@ -80,26 +70,11 @@ namespace BTools.BInspector
                 case SerializedPropertyType.Vector4:
                     return _titleNameProp.vector4Value.ToString();
 
-                case SerializedPropertyType.Rect:
-                    break;
+                case SerializedPropertyType.Vector2Int:
+                    return _titleNameProp.vector2IntValue.ToString();
 
-                case SerializedPropertyType.ArraySize:
-                    break;
-
-                case SerializedPropertyType.Character:
-                    break;
-
-                case SerializedPropertyType.AnimationCurve:
-                    break;
-
-                case SerializedPropertyType.Bounds:
-                    break;
-
-                case SerializedPropertyType.Gradient:
-                    break;
-
-                case SerializedPropertyType.Quaternion:
-                    break;
+                case SerializedPropertyType.Vector3Int:
+                    return _titleNameProp.vector3IntValue.ToString();
 
                 default:
                     break;
@@ -147,6 +122,12 @@ namespace BTools.BInspector
 
                 case SerializedPropertyType.Vector4:
                     return _prop.vector4Value;
+
+                case SerializedPropertyType.Vector2Int:
+                    return _prop.vector2IntValue;
+
+                case SerializedPropertyType.Vector3Int:
+                    return _prop.vector3IntValue;
 
                 case SerializedPropertyType.Rect:
                     return _prop.rectValue;
@@ -219,6 +200,14 @@ namespace BTools.BInspector
 
                 case SerializedPropertyType.Vector4:
                     _prop.vector4Value = (Vector4)_value;
+                    break;
+
+                case SerializedPropertyType.Vector2Int:
+                    _prop.vector2IntValue = (Vector2Int)_value;
+                    break;
+
+                case SerializedPropertyType.Vector3Int:
+                    _prop.vector3IntValue = (Vector3Int)_value;
                     break;
 
                 case SerializedPropertyType.Rect:

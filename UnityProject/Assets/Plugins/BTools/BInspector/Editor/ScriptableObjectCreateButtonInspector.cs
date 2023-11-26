@@ -1,9 +1,8 @@
-﻿/*
+/*
  * @author	bwaynesu
  * @date	2017/08/11
  */
 
-using System;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
@@ -14,7 +13,7 @@ namespace BTools.BInspector
     /// Displaying a "Create File" button directly on the Inspector of a .cs file.
     /// </summary>
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(MonoScript))]
+    [CustomEditor(typeof(MonoImporter))]
     public class ScriptableObjectCreateButtonInspector : Editor
     {
         private static readonly string[] labels = { "Data", "ScriptableObject", string.Empty };
@@ -23,20 +22,19 @@ namespace BTools.BInspector
 
         private void OnEnable()
         {
-            ms = target as MonoScript;
+            ms = (target as MonoImporter).GetScript();
         }
 
         public override void OnInspectorGUI()
         {
-            Type type = ms.GetClass();
+            var type = ms.GetClass();
 
             if (type != null && type.IsSubclassOf(typeof(ScriptableObject)) && !type.IsSubclassOf(typeof(Editor)))
             {
                 if (GUILayout.Button("Create File"))
                 {
-                    ScriptableObject asset = ScriptableObject.CreateInstance(type);
-
-                    string path = AssetDatabase.GetAssetPath(Selection.activeObject);
+                    var asset = ScriptableObject.CreateInstance(type);
+                    var path = AssetDatabase.GetAssetPath(Selection.activeObject);
 
                     if (path == null || path == "")
                         path = "Assets";
@@ -47,7 +45,8 @@ namespace BTools.BInspector
 
                     labels[2] = type.Name;
 
-                    string assetPathAndName = AssetDatabase.GenerateUniqueAssetPath(path + type.Name + ".asset");
+                    var assetPathAndName = AssetDatabase.GenerateUniqueAssetPath(path + type.Name + ".asset");
+
                     AssetDatabase.CreateAsset(asset, assetPathAndName);
                     AssetDatabase.SetLabels(asset, labels);
                     AssetDatabase.SaveAssets();
